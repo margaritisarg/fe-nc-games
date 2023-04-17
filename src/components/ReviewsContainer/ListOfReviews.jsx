@@ -1,10 +1,10 @@
 import Review from "./Review"
 
-const ListOfReviews = () => {
+const ListOfReviews = ({reviews}) => {
     return (
         <div>
             <p>List of reviews</p>
-            <Review/>
+            {reviews ? reviews.map(review => <Review key={review.review_id} review={review} />) : <p>Loading</p>}
         </div>
     )
 }
