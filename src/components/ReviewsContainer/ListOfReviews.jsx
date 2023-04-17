@@ -1,11 +1,27 @@
+import { useEffect, useState } from "react"
+
 import Review from "./Review"
 
-const ListOfReviews = ({reviews}) => {
+import * as api from '../../api'
+
+const ListOfReviews = () => {
+
+    const [reviews, setReviews] = useState()
+    const [isLoading, setIsLoading] = useState(true)
+
+    useEffect(() => {
+        api.fetchAllReviews().then((reviews) => {
+            setReviews(reviews)
+            setIsLoading(false)
+        })
+    }, [])
+
     return (
-        <div>
-            <p>List of reviews</p>
-            {reviews ? reviews.map(review => <Review key={review.review_id} review={review} />) : <p>Loading</p>}
-        </div>
+        <>
+            {isLoading 
+            ? <p>Loading</p> 
+            : reviews.map(review => <Review key={review.review_id} review={review} />)}
+        </>
     )
 }
 
