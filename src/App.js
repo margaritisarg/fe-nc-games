@@ -1,9 +1,10 @@
 import './App.css';
+import PrimaryContainer from './components/PrimaryContainer';
 
 function App() {
   return (
     <div className="App">
-      <h1>Games!</h1>
+      <PrimaryContainer/>
     </div>
   );
 }
