@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router"
+import { useParams } from "react-router-dom"
 
 import Review from "../GenericComponents/Review"
 
@@ -7,14 +7,13 @@ import * as api from '../../api'
 
 const SingleReviewContainer = () => {
     
-    const [reviews, setReviews] = useState()
+    const [review, setReview] = useState()
     const [isLoading, setIsLoading] = useState(true)
 
-    const { review_id } = useParams()
-
+    const {review_id} = useParams()
     useEffect(() => {
-        api.fetchReviewByID(review_id).then((reviews) => {
-            setReviews(reviews)
+        api.fetchReviewByID(review_id).then((review) => {
+            setReview(review)
             setIsLoading(false)
         })
     }, [])
@@ -23,7 +22,7 @@ const SingleReviewContainer = () => {
         <>
             {isLoading 
             ? <p>Loading</p> 
-            : reviews.map(review => <Review key={review.review_id} review={review} />)}
+            : review.map(review => <Review key={review.review_id} review={review} />)}
         </>
     )
 }

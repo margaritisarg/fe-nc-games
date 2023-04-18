@@ -4,7 +4,6 @@ import ButtonVote from "../ReviewsContainer/ButtonVote"
 import reviewCardCSS from './css/reviewCard.module.css'
 
 const Review = ({review}) => {
-
     return (
         <div className={reviewCardCSS.reviewCard}>
             <p className={reviewCardCSS.span2}>{review.title}</p>
@@ -12,6 +11,7 @@ const Review = ({review}) => {
             <p>{review.category}</p>
             <div className={reviewCardCSS.span2}><img src={review.review_img_url}/> </div>
             <p className={reviewCardCSS.span2}>{review.comment_count}</p>
+            <p className={`${reviewCardCSS.span2} ${reviewCardCSS.spacingLeftRight}`}>{review.review_body}</p>
             <div className={`${reviewCardCSS.span2}`}><ButtonVote/></div>
             <div className={
                 `${reviewCardCSS.span2} ${reviewCardCSS.spacingTop} ${reviewCardCSS.spacingBottom}`
