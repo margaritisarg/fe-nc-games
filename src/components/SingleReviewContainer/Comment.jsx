@@ -1,12 +1,14 @@
 
+import commentCSS from './css/commentCard.module.css'
+
 const Comment = ({comment}) => {
-    console.log(comment)
+    const time = comment.created_at.slice(0,10)
     return(
-        <main>
+        <main className={`${commentCSS.commentCard}`}>
             <p>{comment.author}</p>
-            <p>{comment.body}</p>
             <p>{comment.votes}</p>
-            <p>{comment.created_at}</p>
+            <p>{time}</p>
+            <div className={commentCSS.span2}><p>{comment.body}</p></div>
         </main>
     )
 }
