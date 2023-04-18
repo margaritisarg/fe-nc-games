@@ -1,15 +1,10 @@
-import { useNavigate } from "react-router"
+import { Link } from "react-router-dom"
 
 const ButtonComments = ({reviewID}) => {
-    
-    const navigate = useNavigate()
-    function singleReviewPage(){
-        navigate(`/review/${reviewID}`)
-    }
 
     return(
         <div>
-            <button onClick={singleReviewPage}>Comments</button>
+            <Link to={`/review/${reviewID}`}>More</Link>
         </div>
     )
 }
