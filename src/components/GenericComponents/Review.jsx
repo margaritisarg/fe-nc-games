@@ -1,9 +1,10 @@
-import ButtonComments from "./ButtonComments"
-import ButtonVote from "./ButtonVote"
+import ButtonComments from "../ReviewsContainer/ButtonComments"
+import ButtonVote from "../ReviewsContainer/ButtonVote"
 
 import reviewCardCSS from './css/reviewCard.module.css'
 
 const Review = ({review}) => {
+
     return (
         <div className={reviewCardCSS.reviewCard}>
             <p className={reviewCardCSS.span2}>{review.title}</p>
@@ -14,7 +15,7 @@ const Review = ({review}) => {
             <div className={`${reviewCardCSS.span2}`}><ButtonVote/></div>
             <div className={
                 `${reviewCardCSS.span2} ${reviewCardCSS.spacingTop} ${reviewCardCSS.spacingBottom}`
-                }><ButtonComments/>
+                }><ButtonComments reviewID={review.review_id}/>
             </div>
         </div>
     )
