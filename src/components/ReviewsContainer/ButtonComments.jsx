@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom"
 
-const ButtonComments = () => {
+const ButtonComments = ({reviewID}) => {
+
     return(
         <div>
-            <button>Comments</button>
+            <Link to={`/review/${reviewID}`}>More</Link>
         </div>
     )
 }

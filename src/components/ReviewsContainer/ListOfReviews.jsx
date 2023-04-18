@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-import Review from "./Review"
+import Review from "../GenericComponents/Review"
 
 import * as api from '../../api'
 

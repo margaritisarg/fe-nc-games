@@ -9,3 +9,10 @@ export const fetchAllReviews = () => {
         return response.data.allReviews
     })
 }
+
+export const fetchReviewByID = (review_id) => {
+    return reviewsURL.get(`/reviews/${review_id}`).then((response) => {
+        return response.data.ReviewsByID
+    })
+}
+
