@@ -16,3 +16,9 @@ export const fetchReviewByID = (review_id) => {
     })
 }
 
+export const fetchCommentsByID = (review_id) => {
+    return reviewsURL.get(`/reviews/${review_id}/comments`).then((response) => {
+        if(response.data.length === 0) return []
+        else return response.data.commentsByReviewID
+    })
+}
