@@ -22,7 +22,7 @@ const SingleReviewContainer = () => {
         <>
             {isLoading 
             ? <p>Loading</p> 
-            : review.map(review => <Review key={review.review_id} review={review} />)}
+            : <Review key={review[0].review_id} review={review[0]} />}
         </>
     )
 }
