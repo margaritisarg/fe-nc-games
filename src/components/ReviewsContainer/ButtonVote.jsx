@@ -2,11 +2,12 @@
 import { useState } from 'react'
 import * as api from '../../api'
 
-const ButtonVote = ({review_id}) => {
+const ButtonVote = ({review_id, setVote}) => {
     
     const [isError, setIsError] = useState(false)
 
     function handleVote(vote){
+        setVote((currentVotes) => currentVotes + vote.votes)
         api.patchVote(review_id, vote).then(() => {
             setIsError(false)
         }).catch(() => {
