@@ -5,6 +5,7 @@ import Review from "../GenericComponents/Review"
 import ListOfComments from "./ListOfComments"
 
 import * as api from '../../api'
+import FormComment from "./FormComment"
 
 
 const SingleReviewContainer = () => {
@@ -29,7 +30,7 @@ const SingleReviewContainer = () => {
             setComments(comments)
             setIsLoadingComments(false)
         })
-    }, []) //will change empty array once 'add comment form' is added.
+    }, [comments]) 
 
     return(
         <>
@@ -39,7 +40,10 @@ const SingleReviewContainer = () => {
 
             {isLoadingComments
             ? <p>Loading</p>
-            : <ListOfComments comments={comments}/>}
+            : <>
+                <ListOfComments comments={comments}/> 
+                <FormComment />
+              </>}
         </>
     )
 }
