@@ -22,3 +22,7 @@ export const fetchCommentsByID = (review_id) => {
         else return response.data.commentsByReviewID
     })
 }
+
+export const patchVote = (review_id, vote) => {
+    return reviewsURL.patch(`/reviews/${review_id}`, vote)
+}

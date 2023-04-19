@@ -22,7 +22,7 @@ const SingleReviewContainer = () => {
             setReview(review)
             setIsLoading(false)
         })
-    }, [])
+    }, [review])
 
     useEffect(() => {
         api.fetchCommentsByID(review_id).then((comments) => {

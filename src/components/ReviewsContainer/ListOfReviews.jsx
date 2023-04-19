@@ -14,7 +14,7 @@ const ListOfReviews = () => {
             setReviews(reviews)
             setIsLoading(false)
         })
-    }, [])
+    }, [reviews])
 
     return (
         <>
