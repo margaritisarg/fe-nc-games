@@ -15,10 +15,10 @@ const FormComment = () => {
         api.postComment({username: "tickle122", body}).then(() => {
             setIsError(false)
             setIsRefreshing(false)
+            setBody('')
         }).catch(() => {
             setIsError(true)
         })
-        setBody('')
     }
 
     if (isError) return <p>No internet connection. Can't add a comment</p>
@@ -27,9 +27,11 @@ const FormComment = () => {
         <div>
             <form className={formCommentCSS.form} onSubmit={handleSubmit}>
                 <section>
-                    <input type="text" placeholder="Comment" 
-                        value={body} onChange={(e) => setBody(e.target.value)}
-                    />
+                    <textarea 
+                        placeholder="Comment"
+                        value={body} 
+                        onChange={(e) => setBody(e.target.value)} />
+
                 </section>
 
             {body === '' 
