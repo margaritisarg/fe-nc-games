@@ -5,18 +5,13 @@ const reviewsURL = axios.create({
 })
 
 export const fetchAllReviews = (category) => {
-    if(category === 'all'){
+    if(category === 'all' || category === undefined){
         return reviewsURL.get('/reviews').then((response) => {
             return response.data.allReviews
-        })
-    }
-    else if(category){
-        return reviewsURL.get(`/reviews?category=${category}`).then((response) => {
-            return response.data.queriedReviews
         })
     }else{
-        return reviewsURL.get('/reviews').then((response) => {
-            return response.data.allReviews
+        return reviewsURL.get(`/reviews?category=${category}`).then((response) => {
+            return response.data.queriedReviews
         })
     }
 }
