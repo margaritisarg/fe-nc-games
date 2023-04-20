@@ -26,3 +26,11 @@ export const fetchCommentsByID = (review_id) => {
 export const patchVote = (review_id, vote) => {
     return reviewsURL.patch(`/reviews/${review_id}`, vote)
 }
+
+export const fetchCategories = (all=false) => {
+    return reviewsURL.get('/categories').then((response) => {
+        const categories = response.data.AllCategories.map(c => c.slug)
+        if(all) return ['all', ...categories]
+        else return [...categories]
+    })
+}
