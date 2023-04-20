@@ -42,7 +42,7 @@ const SingleReviewContainer = () => {
             ? <p>Loading</p>
             : <>
                 <ListOfComments comments={comments}/> 
-                <FormComment />
+                <FormComment review_id={review_id} />
               </>}
         </>
     )

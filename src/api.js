@@ -39,8 +39,8 @@ export const fetchCategories = (all=false) => {
         if(all) return ['all', ...categories]
         else return [...categories]
     })
-
-export const postComment = (comment) => {
-    return reviewsURL.post(`/reviews/14/comments`, comment)
+}
+export const postComment = (comment, review_id) => {
+    return reviewsURL.post(`/reviews/${review_id}/comments`, comment)
 
 }

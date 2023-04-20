@@ -3,7 +3,7 @@ import * as api from '../../api'
 
 import formCommentCSS from './css/formComment.module.css'
 
-const FormComment = () => {
+const FormComment = ({ review_id }) => {
 
     const [body, setBody] = useState('')
     const [isError, setIsError] = useState(false)
@@ -12,7 +12,8 @@ const FormComment = () => {
     function handleSubmit(event){
         event.preventDefault();
         setIsRefreshing(true)
-        api.postComment({username: "tickle122", body}).then(() => {
+        console.log(review_id)
+        api.postComment({username: "tickle122", body}, review_id).then(() => {
             setIsError(false)
             setIsRefreshing(false)
             setBody('')
