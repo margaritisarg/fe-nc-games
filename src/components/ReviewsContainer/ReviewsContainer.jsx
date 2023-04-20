@@ -1,12 +1,14 @@
+import { useParams } from "react-router-dom"
 
-import DropdownMenu from "./DropdownMenu"
 import ListOfReviews from "./ListOfReviews"
 
 const ReviewsContainer = () => {
+
+    const { categoryParams } = useParams()
+
     return (
         <>
-            <DropdownMenu/>
-            <ListOfReviews/>
+            <ListOfReviews currentCategory={categoryParams}/>
         </>
     )
 }

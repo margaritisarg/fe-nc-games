@@ -4,10 +4,21 @@ const reviewsURL = axios.create({
     baseURL: 'https://gamesmarsncapi.onrender.com/api'
 })
 
-export const fetchAllReviews = () => {
-    return reviewsURL.get('/reviews').then((response) => {
-        return response.data.allReviews
-    })
+export const fetchAllReviews = (category) => {
+    if(category === 'all'){
+        return reviewsURL.get('/reviews').then((response) => {
+            return response.data.allReviews
+        })
+    }
+    else if(category){
+        return reviewsURL.get(`/reviews?category=${category}`).then((response) => {
+            return response.data.queriedReviews
+        })
+    }else{
+        return reviewsURL.get('/reviews').then((response) => {
+            return response.data.allReviews
+        })
+    }
 }
 
 export const fetchReviewByID = (review_id) => {

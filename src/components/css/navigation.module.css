@@ -1,0 +1,30 @@
+.navigation{
+    color: black;
+    background-color: rgb(250, 246, 246);
+    border-color: rgb(255, 214, 214);
+    border-style: solid;
+    padding: 10px;
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    display: grid;
+    
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+    border-color: #dcd8d8;
+    border-style: solid;
+
+    background-color: #f3f3f3;
+    padding: 5px;
+    border-radius: 15px; 
+}
+.link:hover{
+    color:rgb(0, 0, 133);
+    background-color: #f3f3f3;
+    border-color:  #f3ebeb;
+}

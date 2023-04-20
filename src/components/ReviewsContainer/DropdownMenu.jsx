@@ -1,24 +1,13 @@
-import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 import { MenuItem, Select } from "@mui/material"
 
-import * as api from '../../api'
-
-const DropdownMenu = () => {
-
-    const [categories, setCategories] = useState()
-    const [currentCategory, setCurrentCategory] = useState()
-
-    useEffect(() => {
-        api.fetchCategories('all').then((categories) => {
-            setCategories(categories)
-            setCurrentCategory('all')
-        })
-    }, [])
+const DropdownMenu = ({currentCategory, setCurrentCategory, categories}) => {
 
     function handleChange(event){
-        const currentCategory = event.target.value
-        setCurrentCategory(currentCategory)
+        const selectedCategory = event.target.value
+        setCurrentCategory(selectedCategory)
+        
     }
 
     return(
@@ -26,7 +15,12 @@ const DropdownMenu = () => {
             {categories
             ?   
                 <Select onChange={handleChange} value={currentCategory}>
-                    {categories.map(category => <MenuItem key={category} value={category}>{category}</MenuItem>)}
+                    {categories.map(category => 
+                        <MenuItem key={category} value={category}>
+                            <Link to={`/reviews/${category}`}>{category}</Link>
+                            {/* <Link onClick={handleChange} to={`/reviews/${category}`}>{category}</Link>  */}
+                        </MenuItem>)
+                    }
                 </Select>
             :<p>Loading</p>}
         </>
