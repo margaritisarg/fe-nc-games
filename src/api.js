@@ -45,3 +45,7 @@ export const postComment = (comment, review_id) => {
     return reviewsURL.post(`/reviews/${review_id}/comments`, comment)
 
 }
+
+export const deleteComment = (comment_id) => {
+    return reviewsURL.delete(`comments/${comment_id}`)
+}
