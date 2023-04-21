@@ -17,12 +17,17 @@ const Review = ({review}) => {
             <p>{review.owner}</p>
             <p>{review.category}</p>
             <div className={reviewCardCSS.span2}><img src={review.review_img_url}/> </div>
-            <p className={reviewCardCSS.span2}>{vote}</p>
+            <p className={reviewCardCSS.span2}>Votes: {vote}</p>
             <p className={`${reviewCardCSS.span2} ${reviewCardCSS.spacingLeftRight}`}>{review.review_body}</p>
             <div className={`${reviewCardCSS.span2}`}>
                 <ButtonVote review_id={review.review_id} setVote={setVote}/>
             </div>
-            
+            <div className={`${reviewCardCSS.span2}`}>
+                <p>Comments: {review.comment_count}</p>
+            </div>
+            <div className={`${reviewCardCSS.span2}`}>
+                <p>{review.created_at.slice(0,10)}</p>
+            </div>
             {location.pathname.includes("/review/")
             ? <></>
             :<div className={

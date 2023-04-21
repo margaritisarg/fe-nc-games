@@ -16,7 +16,7 @@ const PrimaryContainer = () => {
                 <Route path="/" element={
                     <div className={`${contentsContainer.contents}`}><ReviewsContainer/></div>
                     }/>
-                <Route path="/reviews/:categoryParams" element={
+                <Route path="/reviews/" element={
                     <div className={`${contentsContainer.contents}`}><ReviewsContainer/></div>
                     }/>
                 <Route path="/review/:review_id" element={
