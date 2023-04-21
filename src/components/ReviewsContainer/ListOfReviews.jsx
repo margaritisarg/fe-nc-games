@@ -14,7 +14,7 @@ const ListOfReviews = ({categorySearchParams, orderSearchParams, sortBySearchPar
             setReviews(reviews)
             setIsLoading(false)
         })
-    }, [reviews])
+    }, [categorySearchParams, orderSearchParams, sortBySearchParams])
 
     return (
         <>
