@@ -4,17 +4,17 @@ import Review from "../GenericComponents/Review"
 
 import * as api from '../../api'
 
-const ListOfReviews = ({currentCategory}) => {
+const ListOfReviews = ({categorySearchParams, orderSearchParams, sortBySearchParams}) => {
 
     const [reviews, setReviews] = useState()
     const [isLoading, setIsLoading] = useState(true)
     
     useEffect(() => {
-        api.fetchAllReviews(currentCategory).then((reviews) => {
+        api.fetchAllReviews(categorySearchParams, orderSearchParams, sortBySearchParams).then((reviews) => {
             setReviews(reviews)
             setIsLoading(false)
         })
-    }, [reviews, currentCategory])
+    }, [categorySearchParams, orderSearchParams, sortBySearchParams])
 
     return (
         <>

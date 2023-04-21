@@ -22,13 +22,20 @@
     grid-template-columns: repeat(2, 1fr);
 }
 
+.grid1{
+    display: grid;   
+    gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+}
+
 
 .link{
     text-decoration: none;
     color: black;
     border-color: #dcd8d8;
     border-style: solid;
-
+    width:80%;
+    height:70%;
     background-color: #f3f3f3;
     padding: 5px;
     border-radius: 15px; 
@@ -37,4 +44,10 @@
     color:rgb(0, 0, 133);
     background-color: #f3f3f3;
     border-color:  #f3ebeb;
+}
+
+select{
+    width:80%;
+    height:120%;
+    text-align: center;
 }
