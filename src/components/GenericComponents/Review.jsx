@@ -10,7 +10,6 @@ import reviewCardCSS from './css/reviewCard.module.css'
 const Review = ({review}) => {
     const location = useLocation()
     const [vote, setVote] = useState(review.votes)
-
     return (
         <div className={reviewCardCSS.reviewCard}>
             <p className={reviewCardCSS.span2}>{review.title}</p>
