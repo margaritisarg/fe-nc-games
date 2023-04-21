@@ -27,7 +27,7 @@ const Review = ({review}) => {
             <div className={`${reviewCardCSS.span2}`}>
                 <p>{review.created_at.slice(0,10)}</p>
             </div>
-            {location.pathname.includes("/review/")
+            {location.pathname.includes("/review?")
             ? <></>
             :<div className={
                 `${reviewCardCSS.span2} ${reviewCardCSS.spacingTop} ${reviewCardCSS.spacingBottom}`
