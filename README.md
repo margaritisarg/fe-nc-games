@@ -17,7 +17,7 @@ styled-components: A package for styling React components with CSS
 Installation
 To install and run this project on your local machine, follow these steps:
 
-Clone this repository: git clone https://github.com/your-username/game-reviewer.git
+Clone this repository
 Navigate to the project directory: cd game-reviewer
 Install the dependencies: npm install
 Run the app: npm start
