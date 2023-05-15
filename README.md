@@ -1,4 +1,4 @@
-# Welcome to Game Reviewer, a React-based web application for browsing and reviewing games!
+# Welcome to Game Reviewer, a React-based web application for browsing games!
 
 ## Project Description
 
