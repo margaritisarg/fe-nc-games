@@ -10,21 +10,18 @@ Game Reviewer offers users a platform to browse games, read reviews from other u
 
 ### This project relies on the following dependencies:
 
-react: a JavaScript library for building user interfaces
-
-react-dom: a package for rendering React components in the DOM
-
-react-router-dom: a package for managing routing in React applications
-
-react-scripts: a package for configuring and running a React app
-
-styled-components: a package for styling React components with CSS
+- react: a JavaScript library for building user interfaces
+- react-dom: a package for rendering React components in the DOM
+- react-router-dom: a package for managing routing in React applications
+- react-scripts: a package for configuring and running a React app
+- styled-components: a package for styling React components with CSS
 
 ### Installation
 
 To install and run this project on your local machine, follow these steps:
 
-## Clone this repository
+Clone this repository
+
 Navigate to the project directory: cd game-reviewer
 
 Install the dependencies: npm install
