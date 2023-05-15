@@ -4,6 +4,8 @@
 
 Game Reviewer offers users a platform to browse games, read reviews from other users, and leave their own reviews. This project was built as part of a frontend web development course.
 
+###  Visit the hosted site: https://reviewsmars.netlify.app/
+
 ## Dependencies
 
 ### This project relies on the following dependencies:
