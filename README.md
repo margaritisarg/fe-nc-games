@@ -20,15 +20,11 @@ Game Reviewer offers users a platform to browse games, read reviews from other u
 
 To install and run this project on your local machine, follow these steps:
 
-Clone this repository
-
-Navigate to the project directory: cd game-reviewer
-
-Install the dependencies: npm install
-
-Run the app: npm start
-
-Open the app in your web browser: http://localhost:3000
+- Clone this repository
+- Navigate to the project directory: cd game-reviewer
+- Install the dependencies: npm install
+- Run the app: npm start
+- Open the app in your web browser: http://localhost:3000
 
 ## Usage
 Here's how to use the Game Reviewer application:
