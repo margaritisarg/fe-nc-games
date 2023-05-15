@@ -4,7 +4,9 @@
 
 Game Reviewer offers users a platform to browse games, read reviews from other users, and leave their own reviews. This project was built as part of a frontend web development course.
 
-###  Visit the hosted site: https://reviewsmars.netlify.app/
+##  Host Site: 
+
+https://reviewsmars.netlify.app/
 
 ## Dependencies
 
@@ -16,7 +18,7 @@ Game Reviewer offers users a platform to browse games, read reviews from other u
 - react-scripts: a package for configuring and running a React app
 - styled-components: a package for styling React components with CSS
 
-### Installation
+### Getting started
 
 To install and run this project on your local machine, follow these steps:
 
